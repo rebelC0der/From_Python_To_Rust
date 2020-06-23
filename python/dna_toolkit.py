@@ -13,3 +13,17 @@ def gen_random_seq(length):
 
 def transcription(dna):
     return dna.replace("T", "U")
+
+
+def reverse_complement(dna):
+    """
+    Generating a complement string and returning
+    reveresed version.
+    """
+    trans_dict = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
+    complement_dna = ""
+
+    for nuc in dna:
+        complement_dna += trans_dict[nuc]
+
+    return complement_dna[::-1]
